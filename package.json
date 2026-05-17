@@ -1,0 +1,47 @@
+{
+  "name": "@rbarakhvostov/my-react-components",
+  "version": "1.0.0",
+  "author": "rbarakhvostov",
+  "description": "package with web components",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbarakhvostov/my-react-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rbarakhvostov/my-react-components/issues"
+  },
+  "homepage": "https://github.com/rbarakhvostov/my-react-components#readme",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.100.10",
+    "axios": "^1.16.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.8.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0"
+  }
+}

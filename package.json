@@ -1,6 +1,6 @@
 {
   "name": "@rbarakhvostov/my-react-components",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "rbarakhvostov",
   "description": "package with web components",
   "license": "MIT",
@@ -27,7 +27,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --noEmit && vite build && tsc --emitDeclarationOnly",
+    "build": "tsc --noEmit && vite build && BUILD_TARGET=iife vite build && tsc --emitDeclarationOnly",
+    "serve:dist": "vite preview --host 0.0.0.0",
     "prepare": "npm run build"
   },
   "peerDependencies": {

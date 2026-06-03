@@ -7,6 +7,11 @@ const isIifeBuild = process.env.BUILD_TARGET === "iife";
 
 export default defineConfig({
   plugins: [react()],
+  define: isIifeBuild
+    ? {
+        "process.env.NODE_ENV": JSON.stringify("production"),
+      }
+    : undefined,
   build: isIifeBuild
     ? {
         emptyOutDir: false,
